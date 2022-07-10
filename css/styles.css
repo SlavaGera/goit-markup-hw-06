@@ -545,6 +545,57 @@ body {
     background-color: var(--primary-color);
 }
 
+.footer-submit {
+    margin-left: 93px;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-submit {
+    display: flex;
+    align-items: center;
+    min-width: 358px;
+    min-height: 50px;
+    padding-left: 16px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-submit {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    padding: 0;
+    background: var(--primary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+}
+
+.icon-submit {
+    margin-left: 10px;
+}
+
 /* Portfolio */
 
 .filter-btn {
@@ -684,16 +735,16 @@ body {
 }
 
 .modal {
-     position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
     background-color: var(--white-color);
-    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
-
 
 .modal-close-btn {
     position: absolute;
@@ -709,4 +760,143 @@ body {
     border-radius: 50%;
     background: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:focus,
+.modal-close-btn:hover {
+    fill: var(--primary-color);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 448px;
+}
+
+.form-txt {
+    padding-top: 40px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--dark-color);
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-text {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1, 16px;
+    letter-spacing: 0.01em;
+    color: var(--grey-color);
+}
+
+.form-input {
+    width: 100%;
+    margin: 0;
+    padding: 12px 16px 12px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+ 
+.form-input:focus,
+.form-input:hover {
+    outline: none;
+    border-color: var(--primary-color)
+}
+
+.form-input:hover ~ .icon-form,
+.form-input:focus ~ .icon-form {
+    fill: var(--primary-color);
+}
+
+.icon-form {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(25%);
+}
+
+.form-comment {
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.form-comment:focus,
+.form-comment:hover {
+    outline: none;
+    border-color: var(--primary-color)
+}
+
+.form-comment{
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+
+
+.policy-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.agreement-icon {
+    position: absolute;
+    top: 0;
+    left: 3px;
+}
+
+.form-checkbox:checked ~ .agreement-icon {
+    border-color: var(--primary-color) ;
+    background-color: var(--primary-color);
+    background-image: url(/images/icon-send.svg);
+    background-size: cover;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+}
+
+.policy-link {
+    color: var(--primary-color);
+}
+
+.form-btn{
+    width: 200px;
+    height: 50px;
+    background-color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    padding: 10px 56px;
+    margin: 0 auto;
+    border: none;
+    text-align: center;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
 }
