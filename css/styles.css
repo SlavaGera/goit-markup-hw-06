@@ -867,21 +867,25 @@ body {
 }
 
 .agreement-icon {
-    position: absolute;
-    top: 0;
-    left: 3px;
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--dark-color);
+    border-radius: 2px;
+    margin-right: 7px;
 }
 
 .form-checkbox:checked ~ .agreement-icon {
     border-color: var(--primary-color) ;
     background-color: var(--primary-color);
-    background-image: url(/images/icon-send.svg);
+    background-image: url(/images/icon-check.svg);
     background-size: cover;
     background-origin: border-box;
     background-repeat: no-repeat;
 }
 
 .policy-link {
+    margin-left: 4px;
     color: var(--primary-color);
 }
 
