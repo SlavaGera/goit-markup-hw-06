@@ -513,7 +513,7 @@ body {
     width: 206px;
 }
 
-.footer-do {
+.footer-subscribe {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -537,7 +537,7 @@ body {
     fill: var(--white-color);
     background-color: rgba(255, 255, 255, 0.1);;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-footer-link:hover,
@@ -546,10 +546,10 @@ body {
 }
 
 .footer-submit {
-    margin-left: 93px;
+    margin-left: auto;
 }
 
-.form-footer {
+.footer-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,6 +570,13 @@ body {
     line-height: 1.25;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-submit:focus,
+.subscribe-submit:hover {
+    outline: none;
+    border-color: var(--primary-color);
 }
 
 .btn-submit {
@@ -735,12 +742,13 @@ body {
 }
 
 .modal {
+    padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
     background-color: var(--white-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -771,13 +779,9 @@ body {
 .form {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 448px;
 }
 
 .form-txt {
-    padding-top: 40px;
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -812,13 +816,13 @@ body {
     padding: 12px 16px 12px 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .form-input:focus,
 .form-input:hover {
     outline: none;
-    border-color: var(--primary-color)
+    border-color: var(--primary-color);
 }
 
 .form-input:hover ~ .icon-form,
@@ -831,13 +835,30 @@ body {
     top: 50%;
     left: 12px;
     transform: translateY(25%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:focus-within .input,
+.form-field:hover .input {
+    border: 1px solid var(--primary-color);
+}
+
+.form-field:focus-within .icon-form,
+.form-field:hover .icon-form {
+    fill: var(--primary-color);
 }
 
 .form-comment {
     resize: none;
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-comment:focus,
@@ -846,24 +867,16 @@ body {
     border-color: var(--primary-color)
 }
 
-.form-comment{
-    padding: 12px 16px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+.form-field-chek {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-
 
 .policy-label {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .agreement-icon {
@@ -878,7 +891,7 @@ body {
 .form-checkbox:checked ~ .agreement-icon {
     border-color: var(--primary-color) ;
     background-color: var(--primary-color);
-    background-image: url(/images/icon-check.svg);
+    background-image: url(../images/icon-check.svg);
     background-size: cover;
     background-origin: border-box;
     background-repeat: no-repeat;

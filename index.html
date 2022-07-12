@@ -350,7 +350,7 @@
         </address>
       </div>
       <div class="social-footer">
-        <p class="footer-do"><strong>присоединяйтесь</strong></p>
+        <p class="footer-subscribe"><strong>присоединяйтесь</strong></p>
         <ul class="social-footer-list list">
           <li class="social-footer-item item">
             <a class="social-footer-link" href="" target="_blank" rel="noopener nofollow noreferrer">
@@ -379,8 +379,8 @@
         </ul>
       </div>
       <div class="footer-submit">
-        <p class="footer-do"><strong>Подпишитесь на рассылку</strong></p>
-        <form class="form-footer">
+        <p class="footer-subscribe"><strong>Подпишитесь на рассылку</strong></p>
+        <form class="footer-form">
           <label>
             <input class="subscribe-submit" type="email" placeholder="E-mail" required>
           </label>
@@ -405,16 +405,16 @@
         <p class="form-txt"><strong>Оставьте свои данные, мы вам перезвоним</strong></p>
         <div class="form-field">
           <label class="form-label"><span class="form-text">Имя</span>
-            <input class="form-input" type="text" name="name">
+            <input class="form-input" type="text" name="name" required>
             <svg class="icon-form" width="12" height="12">
               <use href="./images/symbol-defs.svg#icon-name"></use>
             </svg>
           </label>
         </div>
         <div class="form-field">
-          </label class="form-label">
+          </label>
           <label class="form-label"><span class="form-text">Телефон</span>
-            <input class="form-input" type="tel" name="tel">
+            <input class="form-input" type="tel" name="tel" required>
             <svg class="icon-form" width="13" height="13">
               <use href="./images/symbol-defs.svg#icon-phone"></use>
             </svg>
@@ -422,19 +422,18 @@
         </div>
         <div class="form-field">
           <label class="form-label"><span class="form-text">Почта</span>
-            <input class="form-input" type="email" name="email">
+            <input class="form-input" type="email" name="email" required>
             <svg class="icon-form" width="15" height="12">
               <use href="./images/symbol-defs.svg#icon-mail"></use>
             </svg>
           </label>
         </div>
         <label class="form-label" name="comment"><span class="form-text">Комментарий</span>
-          <textarea class="form-comment" rows="9" placeholder="Введите текст">
-          </textarea>
+          <textarea class="form-comment" rows="9" placeholder="Введите текст" required></textarea>
         </label>
         <div class="form-field-chek">
           <label class="policy-label">
-            <input class="form-checkbox hidden-title" type="checkbox" name="user-areement">
+            <input class="form-checkbox hidden-title" type="checkbox" name="user-areement" required>
             <span class="agreement-icon"></span>
             Соглашаюсь с рассылкой и принимаю
             <a class="policy-link" href="">Условия договора</a>
